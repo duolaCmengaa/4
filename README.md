@@ -77,35 +77,35 @@ git clone https://github.com/duolaCmengaa/4.git
 ├── simclr_config.yaml
 ├── simclr_lin.py
 ├── simclr_test.py
-│   └── logs
-│   │   └── SimCLR
-│   │   │   └── cifar10
-│   │   │   │   └── image_lin.log "记录了运行的一些日志"
-│   │   │   │   └── simclr.log
-│   │   │   │   └── simclr_lin.log
-│   │   │   │   └── .hydra
-│   │   │   │   │   └── config.yaml
-│   │   │   │   │   └── hydra.yaml
-│   │   │   │   │   └── overrides.yaml
-│   └── result
-│   │   └── ImageNet_train "SimCLR训练得到的模型在CIFAR-100数据集中使用Linear Classification Protocol"
-│   │   │   └── log
-│   │   │   │   └── events.out.tfevents.1718946241.c32264eda658.718905.0
-│   │   │   └── models
-│   │   │   │   └── imagenet_best.pth
-│   │   └── Linear_Classification_Protocol "在ImageNet数据集上采用监督学习训练得到的模型使用Linear Classification Protocol"
-│   │   │   └── log
-│   │   │   │   └── events.out.tfevents.1718941797.c32264eda658.705964.0
-│   │   │   └── models
-│   │   │   │   └── simclr_lin_resnet18_best.pth
-│   │   └── train "SimCLR在cifar10训练"
-│   │   │   └── log
-│   │   │   │   └── events.out.tfevents.1718030418.c32264eda658.2666795.0
-│   │   │   └── models
-│   │   │   │   └── simclr_resnet18_epoch500.pt
-│   │   │   │   └── simclr_resnet18_epoch1000.pt
-│   │   │   │   └── simclr_resnet18_epoch1500.pt
-│   │   │   │   └── simclr_resnet18_epoch2000.pt
+├── logs
+│   └── SimCLR
+│   │   └── cifar10
+│   │   │   └── image_lin.log "记录了运行的一些日志"
+│   │   │   └── simclr.log
+│   │   │   └── simclr_lin.log
+│   │   │   └── .hydra
+│   │   │   │   └── config.yaml
+│   │   │   │   └── hydra.yaml
+│   │   │   │   └── overrides.yaml
+├── result
+│   └── ImageNet_train "SimCLR训练得到的模型在CIFAR-100数据集中使用Linear Classification Protocol"
+│   │   └── log
+│   │   │   └── events.out.tfevents.1718946241.c32264eda658.718905.0
+│   │   └── models
+│   │   │   └── imagenet_best.pth
+│   └── Linear_Classification_Protocol "在ImageNet数据集上采用监督学习训练得到的模型使用Linear Classification Protocol"
+│   │   └── log
+│   │   │   └── events.out.tfevents.1718941797.c32264eda658.705964.0
+│   │   └── models
+│   │   │   └── simclr_lin_resnet18_best.pth
+│   └── train "SimCLR在cifar10训练"
+│   │   └── log
+│   │   │   └── events.out.tfevents.1718030418.c32264eda658.2666795.0
+│   │   └── models
+│   │   │   └── simclr_resnet18_epoch500.pt
+│   │   │   └── simclr_resnet18_epoch1000.pt
+│   │   │   └── simclr_resnet18_epoch1500.pt
+│   │   │   └── simclr_resnet18_epoch2000.pt
 
 ```
 
@@ -135,10 +135,16 @@ python simclr1.py
 
 #### 使用Linear Classification Protocol对其性能进行评测
 
+#####  对SimCLR训练好的模型
 
+前往[MineResult](https://drive.google.com/drive/folders/1-DZqKcJj7YhARVyFru8imsI3Y5ez0YHE)下载train_and_test或者only_train内的result文件夹，其中only_train是只用cifar10训练集训练得到的结果，而train_and_test是用cifar10的训练集和测试集一起训练得到的结果，将result文件夹
+放置在正确的路径，之后运行
 
+```
+python simclr_lin.py
+```
 
-
+即可正常
 
 
 
