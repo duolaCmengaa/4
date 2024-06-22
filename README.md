@@ -14,26 +14,14 @@
 首先下载好本仓库的所有文件，并配置好环境
 
 ```
-git clone https://github.com/duolaCmengaa/5.git
-cd 5
-pip install -r requirements.txt
+[git clone https://github.com/duolaCmengaa/5.git](https://github.com/duolaCmengaa/4.git)
+cd 4
+
 ```
 
 <details>
-  <summary> Dependencies (click to expand) </summary>
+  <summary> Experimental environment (click to expand) </summary>
   
-  ## Dependencies
-  - PyTorch 
-  - matplotlib
-  - numpy
-  - imageio
-  - imageio-ffmpeg
-  - configargparse
-  - ImageMagick
-
-
-</details>
-
   ## Experimental environment
   - pytorch == 2.3.0
   - pytorch-cuda == 12.1
@@ -46,6 +34,10 @@ pip install -r requirements.txt
   - tqdm == 4.66.4
   - opencv-python == 4.10.0.84 
   - numpy == 1.24.3
+
+</details>
+
+
 
 ## 文件存放路径
 我们提供了三个数据集，数据集可以前往[MineData](https://drive.google.com/drive/folders/1JcWnWqofrvRd6TWf9Ix0hpnNLA0eoJkg)下载，fern，bicycle和testdata文件夹里存放了logs和data文件夹，data文件夹保存了数据集，logs文件夹保存了训练好的模型权重，日志文件和渲染的视频，各个文件夹里所要用到的文件如下所示
