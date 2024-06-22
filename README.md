@@ -30,7 +30,7 @@ git clone https://github.com/duolaCmengaa/4.git
   - tensorboard == 2.10.1
   - tqdm == 4.66.2
   - opencv-python == 4.10.0.82
-  - numpy == 1.19.5
+  - numpy == 1.24.3
 
 </details>
 
