@@ -14,9 +14,9 @@
 首先下载好本仓库的所有文件，并配置好环境
 
 ```
-[git clone https://github.com/duolaCmengaa/5.git](https://github.com/duolaCmengaa/4.git)
-cd 4
+git clone https://github.com/duolaCmengaa/4.git
 
+cd 4
 ```
 
 <details>
