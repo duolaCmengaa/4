@@ -135,7 +135,7 @@ python simclr1.py
 
 #### 使用Linear Classification Protocol对其性能进行评测
 
-#####  对SimCLR训练好的模型
+#####  对SimCLR训练好的模型进行评测
 
 前往[MineResult](https://drive.google.com/drive/folders/1-DZqKcJj7YhARVyFru8imsI3Y5ez0YHE)下载train_and_test或者only_train内的result文件夹，其中only_train是只用cifar10训练集训练得到的结果，而train_and_test是用cifar10的训练集和测试集一起训练得到的结果，将result文件夹
 放置在正确的路径，之后运行
@@ -144,7 +144,35 @@ python simclr1.py
 python simclr_lin.py
 ```
 
-即可正常
+即可正常运行，如果要修改训练epoch直接前往simclr_config.yaml修改finetune_epochs参数就好，最后会在"result/Linear_Classification_Protocol"得到日志和最终的模型权重
+
+#####  对ImageNet数据集上采用监督学习训练得到的表征进行评测
+
+运行
+```
+python image_lin.py
+```
+
+即可正常运行，最后会在"result/ImageNet_train"得到日志和最终的模型权重，同理，如果要修改训练epoch直接前往simclr_config.yaml修改finetune_epochs参数就好
+
+
+#### 对训练好的模型进行测试
+
+下载并将result文件夹放置在正确的路径，注意如果运行前面的评测部分会覆盖下载好的模型权重，之后运行
+
+```
+python simclr_test.py
+```
+
+即可得到对SimCLR训练好的模型进行Linear Classification Protocol评测后得到的模型的top1准确率和top5准确率
+
+运行
+
+```
+python imagenet_test.py
+```
+
+即可得到在ImageNet数据集上采用监督学习训练得到的表征进行Linear Classification Protocol评测后得到的模型的top1准确率和top5准确率
 
 
 
